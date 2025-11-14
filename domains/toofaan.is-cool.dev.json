@@ -1,0 +1,28 @@
+{
+    "description": "Toofaan app",
+    "domain": "is-cool.dev",
+    "subdomain": "toofaan",
+
+    "owner": {
+        "repo": "https://github.com/username/repo",
+        "email": "pondsy2k+tigdp@gmail.com"
+    },
+
+    "record": {
+        "A": ["1.1.1.1", "1.0.0.1"],
+        "AAAA": ["::1", "::2"],
+        "CNAME": "toofaan.is-cool.dev",
+        "MX": ["mx1.toofaan.is-cool.dev", "mx2.toofaan.is-cool.dev"],
+        "TXT": ["toofaan.is-cool.dev_verification=1234567890"],
+        "CAA": [
+            { "flags": 0, "tag": "issue", "value": "letsencrypt.org" },
+            { "flags": 0, "tag": "issuewild", "value": "sectigo.com" }
+        ],
+        "SRV": [
+            { "priority": 10, "weight": 60, "port": 5060, "target": "sipserver.toofaan.is-cool.dev" },
+            { "priority": 20, "weight": 10, "port": 5061, "target": "sipbackup.toofaan.is-cool.dev" }
+        ]
+    },
+
+    "proxied": false
+}
